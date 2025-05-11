@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Garments Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/SplitText.min.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom"
+      id="navbar"
+    >
+      <div class="container-fluid">
+        <a href="#home"
+          ><img
+            class="navbar-brand"
+            src="assets/logo/denimshenim-logo-gif-white.GIF"
+            alt=""
+            height="80vh !important"
+            width="100vw !important"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul
+            class="navbar-nav ms-auto justify-content-center align-items-center"
+          >
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#products">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center" id="hero">
+      <h1 class="display-3 hero-content" id="hero-text" data-aos="fade-up">
+        Welcome To Denim Shenim
+      </h1>
+      <p class="lead mt-3 fst-italic" id="hero-subtext"></p>
+    </section>
+
+    <!-- WE CAN MAKE A CHANGE -->
+    <section>
+      <h1 class="text-center my-5" id="products" data-aos="zoom-in">
+        WE CAN MAKE A CHANGE
+      </h1>
+      <!-- PAIR 1: Left Product, Right Description -->
+      <div class="d-none d-md-block">
+        <!-- Your current 3 PAIRS go here (side-by-side layout) -->
+
+        <div class="row g-4 align-items-center">
+          <!-- Product -->
+          <div class="col-12 col-md-6" data-aos="fade-right">
+            <div class="card product-card" data-target="desc-1">
+              <img
+                src="assets/products/hermes-rivera-R1_ibA4oXiI-unsplash.jpg"
+                class="card-img-top"
+                alt="Stylish T-Shirt"
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Stylish T-Shirt</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="col-12 col-md-6 text-center">
+            <div id="desc-1" class="fade-description">
+              <h4>Product Description</h4>
+              <p>
+                A modern fit t-shirt with soft fabric, perfect for daily wear or
+                a casual night out.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAIR 2: Right Product, Left Description -->
+        <div class="row g-4 align-items-center">
+          <!-- Left Description -->
+          <div class="col-12 col-md-6 text-center">
+            <div id="desc-2" class="fade-description">
+              <h4>Product Description</h4>
+              <p>
+                This denim jacket is crafted with premium materials, perfect for
+                both casual and stylish looks.
+              </p>
+            </div>
+          </div>
+          <!-- Right Product -->
+          <div class="col-12 col-md-6" data-aos="fade-left">
+            <div class="card product-card" data-target="desc-2">
+              <img
+                src="assets/products/francois-le-nguyen-pouTfHUG430-unsplash.jpg"
+                class="card-img-top"
+                alt="Denim Jacket"
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Denim Jacket</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAIR 3: Left Product, Right Description -->
+        <div class="row g-4 align-items-center">
+          <!-- Left Product -->
+          <div class="col-12 col-md-6" data-aos="fade-right">
+            <div class="card product-card" data-target="desc-3">
+              <img
+                src="assets/products/AdobeStock_614564854.jpeg"
+                class="card-img-top"
+                alt="Casual Sneakers"
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Casual Sneakers</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Right Description -->
+          <div class="col-12 col-md-6 text-center">
+            <div id="desc-3" class="fade-description">
+              <h4>Product Description</h4>
+              <p>
+                Comfortable and durable sneakers made for walking, running, or
+                everyday style.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="productCarousel"
+        class="carousel slide d-md-none"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="card text-center">
+              <img
+                src="assets/products/hermes-rivera-R1_ibA4oXiI-unsplash.jpg"
+                class="card-img-top"
+                alt="Stylish T-Shirt"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Stylish T-Shirt</h5>
+                <p class="card-text">
+                  A modern fit t-shirt with soft fabric, perfect for daily wear
+                  or a casual night out.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="card text-center">
+              <img
+                src="assets/products/francois-le-nguyen-pouTfHUG430-unsplash.jpg"
+                class="card-img-top"
+                alt="Denim Jacket"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Denim Jacket</h5>
+                <p class="card-text">
+                  This denim jacket is crafted with premium materials, perfect
+                  for both casual and stylish looks.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="card text-center">
+              <img
+                src="assets/products/AdobeStock_614564854.jpeg"
+                class="card-img-top"
+                alt="Casual Sneakers"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Casual Sneakers</h5>
+                <p class="card-text">
+                  Comfortable and durable sneakers made for walking, running, or
+                  everyday style.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#productCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#productCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="p-5" id="about" data-aos="fade-up">
+      <h2 class="text-center mb-4">About Us</h2>
+      <div class="hover-container">
+        <div>
+          <p class="text-center">
+            DENIM SHENIM is a visionary upcycling initiative to help lower the
+            waste production of the Bangladesh
+            <span class="hover-box">RMG</span>
+            industry. This initiative will also help young designers and artists
+            have access to raw materials and a community of other curators that
+            can help bring their vision to life. All while ethically using
+            existing materials to lower our carbon footprint and rethinking our
+            <span class="hover-box2">extractive design practices.</span>
+          </p>
+        </div>
+        <div class="hover-text">ready-made garment</div>
+        <div class="hover-text2">extractive</div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="pt-5 text-center" id="contact" data-aos="zoom-in">
+      <footer class="text-center text-white" style="background-color: #10121a">
+        <!-- Grid container -->
+        <div class="container">
+          <!-- Section: Links -->
+          <section class="mt-5">
+            <!-- Grid row-->
+            <div class="row text-center d-flex justify-content-center pt-5">
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold" id="footer-link">
+                  <a href="#!" class="text-white">About us</a>
+                </h6>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold" id="footer-link">
+                  <a href="#!" class="text-white">Products</a>
+                </h6>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold" id="footer-link">
+                  <a href="#!" class="text-white">Awards</a>
+                </h6>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold" id="footer-link">
+                  <a href="#!" class="text-white">Help</a>
+                </h6>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold" id="footer-link">
+                  <a href="#!" class="text-white">Contact</a>
+                </h6>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row-->
+          </section>
+          <!-- Section: Links -->
+
+          <hr class="my-5" />
+
+          <!-- Section: Text -->
+          <section class="mb-5">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-8">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                  distinctio earum repellat quaerat voluptatibus placeat nam,
+                  commodi optio pariatur est quia magnam eum harum corrupti
+                  dicta, aliquam sequi voluptate quas.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- Section: Text -->
+
+          <!-- Section: Social -->
+          <section class="text-center mb-5">
+            <a href="" class="text-white me-4">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fab fa-github"></i>
+            </a>
+          </section>
+          <!-- Section: Social -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          © 2020 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/"
+            >MDBootstrap.com</a
+          >
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Optional jQuery (if needed for other scripts) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+}
+.product-card {
+  transition: transform 0.3s ease-in-out;
+}
+.product-card:hover {
+  transform: scale(1.05);
+}
+.navbar-custom {
+  transition: height 0.3s ease-in-out;
+}
+.nav-item:hover {
+  transform: scale(1.2) !important;
+}
+
+.nav-item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: white;
+  left: 50%;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+}
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+#hero-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+#hero-subtext {
+  display: block;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.hover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-box,
+.hover-box2 {
+  border: 2px solid rgb(253, 1, 1);
+  border-radius: 5px;
+  padding: 2px;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer;
+}
+
+.hover-box:hover,
+.hover-box2:hover {
+  /* transform: scale(1.2);
+  font-size: 20px; */
+  border: 2px solid rgb(13, 11, 116);
+}
+
+.hover-text,
+.hover-text2 {
+  opacity: 0;
+  transform: translateY(20px);
+  width: 300px;
+  background-color: #fff;
+  color: #000;
+  text-align: left;
+  padding: 15px;
+  border-radius: 12px;
+  position: absolute;
+  bottom: 110%;
+  left: 45%;
+  transform: translate(-50%, 20px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1.6;
+  pointer-events: none; /* Prevent accidental clicks */
+}
+
+#products {
+  /* design the heading for me */
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+}
+/* Position for Extractive Design Practices text */
+.hover-text2 {
+  left: 70%;
+  bottom: auto;
+}
+#hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  overflow: hidden;
+  background: url("assets/hero bg/pexels-suzyhazelwood-1568640.jpg")
+    center/cover no-repeat fixed;
+}
+#hero-subtext {
+  z-index: 2;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+/* Optional: Add a dark overlay for better text visibility */
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+#footer-link a {
+  text-decoration: none !important;
+}
+#footer-link:hover {
+  transform: scale(1.2);
+}
+.product-card {
+  border: 1px solid rgb(18, 41, 102); /* Adds a solid black border with a width of 2px */
+}
+.fade-description {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.product-card:hover ~ .fade-description,
+.product-card:hover + .fade-description {
+  opacity: 1;
+  pointer-events: auto;
+}
